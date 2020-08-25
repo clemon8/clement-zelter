@@ -108,12 +108,44 @@
 		let dot = document.querySelectorAll('.dot');
 		let cell = document.querySelectorAll('.carousel-cell');
 
+		// Pol's magic for the cursor
+		let lock = false;
+		var top_offset = 0;
+		var left_offset = 0;
+		var top_cursor = 0;
+		var left_cursor = 0;
+
+		var runOnScroll =  function(evt) {
+			if (lock == true){
+				return;
+			}
+			lock = true;
+			var new_x = window.scrollX;
+			var new_y = window.scrollY;
+			mouseCursor.style.top = top_cursor + (new_y - top_offset) + 'px';
+			mouseCursor.style.left = left_cursor + (new_x - left_offset) +'px';
+			lock = false;
+		};
+		var elements = document.getElementsByTagName("*");
+		elements = Array.prototype.slice.call(elements);
+		elements.forEach(function(element) {
+			window.addEventListener("scroll", runOnScroll, {passive: true});
+		});
+		
+		function move_cursor(x, y){
+			mouseCursor.style.top = x + 'px';
+			mouseCursor.style.left = y +'px';
+		}	
+		// end of Pol's magic
 
 		window.addEventListener('mousemove', cursor);
 
 		function cursor(e){
-			mouseCursor.style.top = e.pageY + 'px';
-			mouseCursor.style.left = e.pageX +'px';
+			top_offset = window.scrollY;
+			left_offset = window.scrollX;
+			top_cursor = e.pageY;
+			left_cursor = e.pageX;
+			move_cursor(top_cursor, left_cursor);
 		}
 
 		navLinks.forEach(link =>{

@@ -8,7 +8,7 @@
 html{
 	scroll-behavior: smooth;
 	box-sizing: border-box;
-	cursor: none;
+	/*cursor: none;*/
 }
 
 *, *:before, *:after{
@@ -19,7 +19,6 @@ body{
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
-	cursor: none;
 }
 
 
@@ -37,19 +36,16 @@ body{
 
 a{
 	text-decoration: none;
-	cursor: none;
 }
 
 .link_deco{
 	color: #323232;
 	text-decoration: none;
-	cursor: none;
 }
 
 .link_deco2{
 	color: #E8E8E8;
 	text-decoration: none;
-	cursor: none;
 }
 
 .nav_bar{
@@ -147,7 +143,6 @@ a{
 	color: #323232;
 	padding-top: 15px;
 	height: 100vh;
-	cursor: none;
 }
 
 .Contact{
@@ -237,12 +232,6 @@ h2{
 	margin-top: 5vh;
 	width: 100vw;
 	z-index: 5;
-	cursor: none;
-}
-
-
-.main-carousel{
-	cursor: none;
 }
 
 .carousel-cell{
@@ -253,7 +242,6 @@ h2{
 	margin-right: 30vw;
 	border-radius: 35px;
 	box-shadow: -9px 10px 26px 0px rgba(0,0,0,0.33);
-	cursor: none;
 }
 
 .cell1{
