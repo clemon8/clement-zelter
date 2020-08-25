@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>clement-zelter</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/flickity.css">
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script> src="js/ScrollMagic.min.js" </script>
+	<link href="css/style.css" rel="stylesheet">
+	
+	<script>
+		function link(s){
+        window.open(s); 
+    };
+	</script>
+	
+</head>
+
+<body>
+	<div id="cursor" class="cursor"></div>
+	<div class="blur-filter"></div>
+	<section id="home" class="homepage">
+		<div class="header">
+			<h1 class="logo hoverable" onclick="link('https://www.instagram.com/clemon8/')">Clément Zelter</h1>
+			<ul class="nav_bar">
+				<!--<li class="nav_element hoverable"><a href="#home">Home</a></li>-->
+				<li class="nav_element hoverable"><a href="#creations" class="link_deco">Creations</a></li>
+				<li class="nav_element hoverable"><a class="link_deco" href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="home_section">
+			<div class="tagline">
+				<h2 class="tag1">Take a leap into <br></h2>
+				<h2 id="anim-tagline" class="tag2"><span>Augmented Reality</span></h2>
+			</div>
+
+			<div id="trigger" class="Concept">
+				<h3>Why Invest in AR?</h3>
+				<p>Because, this is the future.<br> <br>You want to be the cool and geeky uncle, not the boring one, right?
+				<br> <br> <br>Well, it's time to jump in the amazing world of AR to make your
+				wildest dreams a reality!</p>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="creations" class="Creations">
+		
+<!--		<img class="illustration" src="img/man.svg" alt="man laying on the ground with a tablet">-->
+		
+		<div class="creation_wrapper">
+			<h3>Creations</h3>
+			<p>Click on a creation you like to use it!</p>
+		</div>
+
+		<div class="caroussel_wrapper">
+			<div class="main-carousel">
+			  <div class="carousel-cell cell1" onclick="link('https://www.instagram.com/ar/2669005600055612')">
+			  </div>
+			  <div class="carousel-cell cell2">
+			  </div>
+			  <div class="carousel-cell cell3" 
+			  onclick="link('https://www.instagram.com/ar/2661651397416055')">
+			  </div>
+			  <div class="carousel-cell cell4">
+			  </div>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="contact" class="Contact">
+		<div class="contact_wrapper">
+			<h3>Let's keep in touch!</h3>
+			<p>Let's make a filter for your brand, or whatever you want to make a filter for!</p>
+			<p> <br/> </p>
+			<p class="hoverable">clement@zelter.fr</p>
+			<p class="hoverable"><a class="link_deco2" href="https://www.instagram.com/clemon8/">@clemon8</a></p>
+			
+			<!--<img class="illustration2" src="img/man2.svg" alt="man on a couch with a laptop">-->
+		</div>
+	</section>
+
+
+
+
+	<script>
+		$('.main-carousel').flickity({
+		  // options
+			wrapAround: true,
+			autoPlay: 3000,
+			pauseAutoPlayOnHover: false,
+			prevNextButtons: false
+		});
+	</script>
+
+
+	<script>
+		let mouseCursor = document.querySelector('.cursor');
+		let navLinks = document.querySelectorAll('.hoverable');
+		let bigTitles = document.querySelectorAll('.tag2');
+		let creationPage = document.querySelectorAll('.Creations');
+		let contactPage = document.querySelectorAll('.Contact');
+		let dot = document.querySelectorAll('.dot');
+		let cell = document.querySelectorAll('.carousel-cell');
+
+
+		window.addEventListener('mousemove', cursor);
+
+		function cursor(e){
+			mouseCursor.style.top = e.pageY + 'px';
+			mouseCursor.style.left = e.pageX +'px';
+		}
+
+		navLinks.forEach(link =>{
+			link.addEventListener('mouseover', () =>{
+				mouseCursor.classList.add('link-grow');
+				link.classList.add('text-grow');
+			})
+
+			link.addEventListener('mouseleave', () =>{
+				mouseCursor.classList.remove('link-grow');
+				link.classList.remove('text-grow');
+			})
+		})
+
+		bigTitles.forEach(title =>{
+			title.addEventListener('mouseover', () =>{
+			mouseCursor.classList.add('title-grow');
+			})
+
+			title.addEventListener('mouseleave', () =>{
+			mouseCursor.classList.remove('title-grow');
+			})
+		})
+
+
+		creationPage.forEach(page =>{
+			page.addEventListener('mouseover', () =>{
+			mouseCursor.classList.add('crea-cursor');
+			})
+
+			page.addEventListener('mouseleave', () =>{
+			mouseCursor.classList.remove('crea-cursor');
+			})
+		})
+
+
+		contactPage.forEach(page =>{
+			page.addEventListener('mouseover', () =>{
+			mouseCursor.classList.add('cont-cursor');
+			})
+
+			page.addEventListener('mouseleave', () =>{
+			mouseCursor.classList.remove('cont-cursor');
+			})
+		})
+
+
+		dot.forEach(point =>{
+			point.addEventListener('mouseover', () =>{
+			mouseCursor.classList.add('simple-grow');
+			})
+
+			point.addEventListener('mouseleave', () =>{
+			mouseCursor.classList.remove('simple-grow');
+			})
+		})
+
+
+		cell.forEach(ima =>{
+			ima.addEventListener('mouseover', () =>{
+			mouseCursor.classList.add('simple-grow');
+			})
+
+			ima.addEventListener('mouseleave', () =>{
+			mouseCursor.classList.remove('simple-grow');
+			})
+		})
+
+
+	</script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+
+	<script>
+		var controller = new ScrollMagic.Controller();
+
+		new ScrollMagic.Scene({
+			triggerElement: "#anim-tagline",
+		})
+		.setClassToggle("#anim-tagline", "fade-in")
+		.addTo(controller);
+
+	</script>
+
+
+
+
+</body>
+</html>

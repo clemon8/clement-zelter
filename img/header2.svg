@@ -1,0 +1,16 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <style type="text/css">.st0{fill:url(#SVGID_1_);}</style>
+ <title>Fichier 1</title>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="Calque_2_1_">
+   <g id="Calque_1-2">
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="960" y1="0" x2="960" y2="1080">
+     <stop offset="0" stop-color="#DFD6FF"/>
+     <stop offset="1" stop-color="#624FB2"/>
+    </linearGradient>
+    <path class="st0" d="m0,185c0,0 221.78875,-54.44264 635.91769,-66.26842c414.12894,-11.82578 766.80933,165.42754 1284.08231,66.26842l0,895l-1920,0l0,-895z" id="svg_1" fill="black"/>
+   </g>
+  </g>
+ </g>
+</svg>
