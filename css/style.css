@@ -242,33 +242,27 @@ h2{
 	width: 40vh;
 	height: 60vh;
 	margin-right: 30vw;
+
+}
+
+video{
+	width: 40vh;
+	height: 60vh;
 	border-radius: 35px;
 	box-shadow: -9px 10px 26px 0px rgba(0,0,0,0.33);
 }
 
 .cell1{
-	background-image: url(../img/duskus.gif);
-	background-position: center;
-	background-size: contain;
 }
 
 .cell2{
-	background-image: url(../img/san_1.gif);
-	background-position: top;
-	background-size: contain;
 }
 
 
 .cell3{
-	background-image: url(../img/san_light.gif);
-	background-position: center;
-	background-size: contain;
 }
 
 .cell4{
-	background-image: url(../img/block_mirror.gif);
-	background-position: center;
-	background-size: contain;
 }
 
 
