@@ -3,20 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>clement-zelter</title>
-	
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 	<link rel="icon" href="img/icon.png" type="image/png" sizes="32x32">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/flickity.css">
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script> src="js/ScrollMagic.min.js" </script>
 	<link href="css/style.css" rel="stylesheet">
-	
+
 	<script>
 		function link(s){
-        window.open(s); 
+        window.open(s);
     };
 	</script>
-	
+
 </head>
 
 <body>
@@ -39,7 +41,7 @@
 
 			<div id="trigger" class="Concept">
 				<h3>Why Invest in AR?</h3>
-				<p>Because, this is the future.<br> <br>Boost your visibility on social networks and build audience engagement through an immersive and fun experience! 
+				<p>Because, this is the future.<br> <br>Boost your visibility on social networks and build audience engagement through an immersive and fun experience!
 				<br> <br> <br>Well, it's time to jump in the amazing world of AR to make your
 				wildest dreams a reality!</p>
 
@@ -50,9 +52,9 @@
 	</section>
 
 	<section id="creations" class="Creations">
-		
+
 <!--		<img class="illustration" src="img/man.svg" alt="man laying on the ground with a tablet">-->
-		
+
 		<div class="creation_wrapper">
 			<h3>Creations</h3>
 			<p>Click on a creation you like to use it!</p>
@@ -61,24 +63,29 @@
 		<div class="caroussel_wrapper">
 			<div class="main-carousel">
 			  <div class="carousel-cell cell1" onclick="link('https://www.instagram.com/ar/2669005600055612')">
-				  <video playsinline autoplay muted loop> 
+				  <video playsinline autoplay muted loop>
 				  	<source src="img/duskus.webm" type="video/webm">
 				  </video>
 			  </div>
 			  <div class="carousel-cell cell2">
-				  <video playsinline autoplay muted loop> 
+				  <video playsinline autoplay muted loop>
 				  	<source src="img/san_holo_light.webm" type="video/webm">
 				  </video>
 			  </div>
-			  <div class="carousel-cell cell3" 
+			  <div class="carousel-cell cell3"
 			  onclick="link('https://www.instagram.com/ar/2661651397416055')">
-				  <video playsinline autoplay muted loop> 
+				  <video playsinline autoplay muted loop>
 				  	<source src="img/san_holo_vibrant.webm" type="video/webm">
 				  </video>
 			  </div>
 			  <div class="carousel-cell cell4" onclick="link('https://www.instagram.com/ar/728204517718936')">
-				  <video playsinline autoplay muted loop> 
+				  <video playsinline autoplay muted loop>
 				  	<source src="img/block_mirror.webm" type="video/webm">
+				  </video>
+			  </div>
+			  <div class="carousel-cell cell5" onclick="link('https://www.instagram.com/ar/809351166552969')">
+				  <video playsinline autoplay muted loop>
+				  	<source src="img/bellecour_choukar.webm" type="video/webm">
 				  </video>
 			  </div>
 			</div>
@@ -91,8 +98,16 @@
 			<h3>Let's keep in touch!</h3>
 			<p>Let's make a filter for your brand, or whatever you want to make a filter for!</p>
 			<p> <br/> </p>
-			<p class="hoverable">clement.zelter@gmail.com</p>
-			<p class="hoverable"><a class="link_deco2" href="https://www.instagram.com/clemon8/">@clemon8</a></p>
+			
+			<div class="socials">
+				<button class="social_button">
+				<p class="hoverable social_icon"><i class="fab fa-instagram"></i></p>
+				</button>
+
+				<button class="social_button">
+				<p class="hoverable social_icon"><i class="fas fa-paper-plane"></i></p>
+				</button>
+			</div>
 			
 			<!--<img class="illustration2" src="img/man2.svg" alt="man on a couch with a laptop">-->
 		</div>
@@ -144,11 +159,11 @@
 		elements.forEach(function(element) {
 			window.addEventListener("scroll", runOnScroll, {passive: true});
 		});
-		
+
 		function move_cursor(x, y){
 			mouseCursor.style.top = x + 'px';
 			mouseCursor.style.left = y +'px';
-		}	
+		}
 		// end of Pol's magic
 
 		window.addEventListener('mousemove', cursor);
